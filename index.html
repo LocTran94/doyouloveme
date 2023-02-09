@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #app {
+      text-align: center;
+      margin: 50px;
+    }
+
+    #no-button {
+
+      position: absolute;
+    }
+
+  </style>
+</head>
+<body>
+<div id="app">
+  <h1>Do you love me?</h1>
+  <button id="yes-button">Yes</button>
+  <button id="no-button">No</button>
+</div>
+
+
+
+<script>
+  const yesButton = document.getElementById("yes-button");
+  const noButton = document.getElementById("no-button");
+
+  noButton.addEventListener("mouseover", function() {
+    noButton.style.display = "block";
+    let x = Math.floor(Math.random() * window.innerWidth);
+    let y = Math.floor(Math.random() * window.innerHeight);
+    noButton.style.left = x + "px";
+    noButton.style.top = y + "px";
+  });
+
+  yesButton.addEventListener("click", function() {
+    alert('yes')
+  });
+
+</script>
+</body>
+</html>
